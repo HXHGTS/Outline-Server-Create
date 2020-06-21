@@ -46,5 +46,31 @@ sysctl net.ipv4.tcp_congestion_control
 
 lsmod | grep bbr
 
-### Outline链接转换原版SS链接（如果能成功安装Outline客户端则不需要这一步！）
+### Outline链接转换原版SS链接（在CentOS7服务器上运行，如果能成功安装Outline客户端则不需要这一步！）
+
+yum -y groupinstall development
+
+yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+
+cd /usr/local
+
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+
+tar xf Python-3.6.4.tgz
+
+cd Python-3.6.4
+
+./configure --prefix=/usr/local/python3
+
+make && make install
+
+cd /etc/profile.d
+
+echo 'export PATH=$PATH:/usr/local/python3/bin/' > python3.sh
+
+wget https://raw.githubusercontent.com/Bill0412/ss-link-decoder/master/ssdecode.py
+
+python ssdecode.py 你的Outline链接
+
+输出结果放入原版ss或者sstap即可！
 
