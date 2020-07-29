@@ -22,9 +22,13 @@ sudo systemctl enable docker
 
 wget https://github.com/HXHGTS/WireGuardServer/raw/master/preload.sh
 
+sudo chmod +x preload.sh
+
 sudo bash preload.sh
 
 wget https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh
+
+sudo chmod +x install_server.sh
 
 sudo bash install_server.sh
 
