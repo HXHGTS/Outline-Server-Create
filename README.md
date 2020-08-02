@@ -26,7 +26,7 @@ sudo chmod +x preload.sh
 
 sudo bash preload.sh
 
-这个执行完成会触发重启且不会提示，是正常情况
+reboot
 
 wget https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh
 
