@@ -11,7 +11,7 @@
 [Windows-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.exe) [Linux-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.AppImage) [Windows-Shadowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.1.10.0/Shadowsocks-4.1.10.0.zip) [Windows-SSTAP](https://github.com/HXHGTS/Outline-Server-Create/raw/master/SSTap-beta-setup-1.0.9.7.exe.7z)
 
 ### 远端服务器部署Outline(CentOS7+)
-
+```
 yum update -y
 
 yum install -y wget docker
@@ -33,9 +33,9 @@ wget https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/ser
 sudo chmod +x install_server.sh
 
 sudo bash install_server.sh
-
+```
 ### 远端服务器部署BBR(CentOS7+)
-
+```
 uname -r
 
 grep "net.core.default_qdisc = fq" /etc/sysctl.conf
@@ -53,9 +53,9 @@ sysctl net.ipv4.tcp_available_congestion_control
 sysctl net.ipv4.tcp_congestion_control
 
 lsmod | grep bbr
-
+```
 ### Outline链接转换原版SS链接（在CentOS7服务器上运行，如果能成功安装Outline客户端则不需要这一步！）
-
+```
 yum -y groupinstall development
 
 yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
@@ -79,6 +79,6 @@ echo 'export PATH=$PATH:/usr/local/python3/bin/' > python3.sh
 wget https://raw.githubusercontent.com/Bill0412/ss-link-decoder/master/ssdecode.py
 
 python ssdecode.py 你的Outline链接
-
+```
 输出结果放入原版ss或者sstap即可！
 
