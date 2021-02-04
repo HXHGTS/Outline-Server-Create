@@ -20,40 +20,21 @@ service docker start
 
 sudo systemctl enable docker
 
-wget https://github.com/HXHGTS/WireGuardServer/raw/master/preload.sh
+wget https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate.sh
 
-sudo chmod +x preload.sh
+sudo chmod +x KernelUpdate.sh
 
-sudo bash preload.sh
+sudo bash KernelUpdate.sh
 
-reboot
+wget https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh -O TCPO.sh && chmod +x TCPO.sh && sudo bash TCPO.sh && rm -f KernelUpdate.sh && rm -f TCPO.sh
 
-wget https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh
+wget https://cdn.jsdelivr.net/gh/Jigsaw-Code/outline-server/src/server_manager/install_scripts/install_server.sh
 
 sudo chmod +x install_server.sh
 
 sudo bash install_server.sh
 ```
-### 远端服务器部署BBR(CentOS7+)
-```
-uname -r
 
-grep "net.core.default_qdisc = fq" /etc/sysctl.conf
-
-echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
-
-grep "net.ipv4.tcp_congestion_control = bbr" /etc/sysctl.conf
-
-echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
-
-sysctl -p 
-
-sysctl net.ipv4.tcp_available_congestion_control
-
-sysctl net.ipv4.tcp_congestion_control
-
-lsmod | grep bbr
-```
 ### Outline链接转换原版SS链接（在CentOS7服务器上运行，如果能成功安装Outline客户端则不需要这一步！）
 ```
 yum -y groupinstall development
@@ -76,7 +57,7 @@ cd /etc/profile.d
 
 echo 'export PATH=$PATH:/usr/local/python3/bin/' > python3.sh
 
-wget https://raw.githubusercontent.com/Bill0412/ss-link-decoder/master/ssdecode.py
+wget https://cdn.jsdelivr.net/gh/Bill0412/ss-link-decoder/ssdecode.py
 
 python ssdecode.py 你的Outline链接
 ```
