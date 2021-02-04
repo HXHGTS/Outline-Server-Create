@@ -8,7 +8,7 @@
 
 ### 自己电脑安装客户端
 
-[Windows-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.exe) [Linux-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.AppImage) [Windows-Shadowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.1.10.0/Shadowsocks-4.1.10.0.zip) [Windows-SSTAP](https://https://cdn.jsdelivr.net/gh/HXHGTS/Outline-Server-Create/SSTap-beta-setup-1.0.9.7.exe.7z)
+[Windows-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.exe) [Linux-Outline](https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/client/stable/Outline-Client.AppImage) [Windows-Shadowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.1.10.0/Shadowsocks-4.1.10.0.zip) [Windows-SSTAP](https://cdn.jsdelivr.net/gh/HXHGTS/Outline-Server-Create/SSTap-beta-setup-1.0.9.7.exe.7z)
 
 ### 远端服务器部署Outline(CentOS7+)
 ```
