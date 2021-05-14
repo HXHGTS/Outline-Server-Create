@@ -1,12 +1,10 @@
 #!/bin/sh
 
-yum update -y
+yum install -y docker
 
-yum install -y wget docker
+systemctl start docker
 
-service docker start
-
-sudo systemctl enable docker
+systemctl enable docker
 
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh | sh
 
