@@ -13,11 +13,8 @@
 ### 远端服务器部署Outline(CentOS7+)
 
 ```
-
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate.sh | sh
-
 curl https://cdn.jsdelivr.net/gh/HXHGTS/Outline-Server-Create/Install.sh | sh
-
 ```
 
 ### Outline链接转换原版SS链接（在CentOS7服务器上运行，如果能成功安装Outline客户端则不需要这一步！）
